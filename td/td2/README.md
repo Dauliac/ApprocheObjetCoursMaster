@@ -1,7 +1,7 @@
 # TD2
 Ce TD a pour objectif de :
 
-* Coder une hierarchie de classes (couplage fort)S
+* Coder une hierarchie de classes (couplage fort)
 
 ## Consignes
 
