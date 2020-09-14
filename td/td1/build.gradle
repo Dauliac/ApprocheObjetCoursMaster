@@ -23,3 +23,11 @@ repositories {
 dependencies {
   testCompile 'junit:junit:4.12'
 }
+
+
+task runWithExec(type: Exec) {
+    dependsOn build
+    group = "Execution"
+    description = "Run the main class with ExecTask"
+    commandLine "java", "-classpath", sourceSets.main.runtimeClasspath.getAsPath(), javaMainClass
+}

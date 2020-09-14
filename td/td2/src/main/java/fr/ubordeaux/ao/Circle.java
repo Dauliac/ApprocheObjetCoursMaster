@@ -1,7 +1,5 @@
 package fr.ubordeaux.ao;
 
-public class Circle {
-    int centerX;
-    int centerY;
+public class Circle extends Ellipse {
     int radius;
 }

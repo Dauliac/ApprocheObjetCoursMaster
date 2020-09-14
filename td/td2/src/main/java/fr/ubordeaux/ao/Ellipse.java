@@ -1,9 +1,9 @@
 package fr.ubordeaux.ao;
 
-public class Ellipse {
-    int x;
-    int y;
-    int radiusX;
-    int radiusY;
-    
+import java.util.HashMap;
+
+public class Ellipse extends Geometric {
+    Point center;
+
+    HashMap<String, Integer> radius;
 }
