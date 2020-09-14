@@ -13,17 +13,25 @@ public class Main {
     public String getGreeting() {
         return "Hello world.";
     }
+    public static Document ReadXmlFile(String filePath) {
+        try {
+            File file = new File(filePath);
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(file);
+            return doc;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        finally {
+            System.exit(1);
+        }        
+        return null;
+    }
 
-    public static void main(String[] args) {      
+    public static void main(String[] args) {    
         if(args.length > 0) {
-            try {
-                File file = new File(args[0]);
-                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-                Document doc = dBuilder.parse(file);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            Document document = ReadXmlFile(args[0]);
         }
         System.out.println(new Main().getGreeting());
     }
