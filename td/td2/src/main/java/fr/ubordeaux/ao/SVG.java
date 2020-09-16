@@ -11,6 +11,7 @@ public class SVG {
     SVG(List<Geometric> content){
         this.content = content;
     }
+    
     SVG(){
         this.content = new ArrayList<>();
     }
